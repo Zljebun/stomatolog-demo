@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="bs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ortodoncija | DentVita</title>
-    <meta name="description" content="Ravni zubi za ljepši osmijeh i zdraviji zagriz - za djecu i odrasle. Nevidljivi aligneri, fiksni i mobilni aparati, 3D dijagnostika.">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ortodoncija | DentVita</title>
+  <meta name="description" content="Ravni zubi za ljepši osmijeh i zdraviji zagriz - za djecu i odrasle. Nevidljivi aligneri, fiksni i mobilni aparati, 3D dijagnostika.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-    <header id="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="../index.html" class="logo">
-                    <span class="logo-icon">🦷</span>
-                    <span class="logo-text">DentVita</span>
-                </a>
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="../index.html#o-nama">O nama</a></li>
-                        <li><a href="../index.html#usluge">Usluge</a></li>
-                        <li><a href="../index.html#tim">Tim</a></li>
-                        <li><a href="../blog.html">Blog</a></li>
-                        <li><a href="../index.html#kontakt" class="nav-cta">Zakaži termin</a></li>
-                    </ul>
-                </nav>
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </header>
 
-    <section class="service-page">
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2C9.24 2 7 4.24 7 7c0 1.38.56 2.63 1.46 3.54L12 21l3.54-10.46A4.98 4.98 0 0017 7c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z"/></svg></div>
+        Dent<span>Vita</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="../index.html#usluge">Usluge</a>
+        <a href="../index.html#o-nama">O nama</a>
+        <a href="../index.html#galerija">Galerija</a>
+        <a href="../index.html#cijene">Cjenovnik</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../index.html#kontakt">Kontakt</a>
+      </nav>
+      <div class="header-cta">
+        <a href="tel:+38733123456" class="header-phone">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          033 123-456
+        </a>
+        <a href="../index.html#kontakt" class="btn btn-primary btn-sm">Zakaži termin</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Meni"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+  <section class="service-page">
         <div class="service-page-container">
             <div class="service-page-content">
                 <span class="section-label">Usluge</span>
@@ -77,52 +79,23 @@
             </div>
         </div>
     </section>
+  </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 DentVita. Sva prava zadržana. | Kreirao <a href="https://webkraft.site" target="_blank">WebKraft</a></p>
-        </div>
-    </footer>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; 2026 DentVita. Sva prava zadržana.</span>
+        <span>Sajt izradio <a href="https://webkraft.site" target="_blank" rel="noopener">WebKraft</a></span>
+      </div>
+    </div>
+  </footer>
 
-    <script>
-        // Header scroll effect
-        const header = document.getElementById('header');
-        let lastScroll = 0;
+  <script>
+    const header=document.getElementById('header');window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>20));
+    const menuToggle=document.getElementById('menuToggle'),nav=document.getElementById('nav');
+    menuToggle.addEventListener('click',()=>nav.classList.toggle('open'));
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+  </script>
 
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-
-            if (currentScroll <= 0) {
-                header.classList.remove('scroll-up');
-                return;
-            }
-
-            if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
-                header.classList.remove('scroll-up');
-                header.classList.add('scroll-down');
-            } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
-                header.classList.remove('scroll-down');
-                header.classList.add('scroll-up');
-            }
-            lastScroll = currentScroll;
-        });
-
-        // Mobile menu toggle
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const mainNav = document.querySelector('.main-nav');
-
-        mobileMenuToggle.addEventListener('click', () => {
-            mobileMenuToggle.classList.toggle('active');
-            mainNav.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.main-nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenuToggle.classList.remove('active');
-                mainNav.classList.remove('active');
-            });
-        });
-    </script>
 </body>
 </html>
