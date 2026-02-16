@@ -495,57 +495,109 @@ section {
 .service-link:hover { gap: 10px; }
 
 /* ============================================
-   SERVICE DETAILS
+   SERVICE PAGE
    ============================================ */
 
-.service-details {
-  background: var(--bg-white);
-  padding: 0 0 80px;
+.service-page {
+  padding: 140px 0 80px;
 }
 
-.service-detail {
-  background: var(--bg);
-  border-radius: var(--radius-lg);
-  padding: 40px;
-  margin-bottom: 24px;
-  border: 1px solid var(--border);
-  scroll-margin-top: 100px;
+.service-page-container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.service-detail h3 {
-  font-size: 1.4rem;
-  color: var(--primary);
+.service-page-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.service-page-header h1 {
+  font-size: 2.2rem;
   margin-bottom: 16px;
 }
 
-.service-detail > p {
+.service-page-header p {
+  font-size: 1.1rem;
   color: var(--text-light);
-  font-size: 1rem;
-  margin-bottom: 16px;
-  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.service-detail ul {
+.service-page-content {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.service-page-content h2 {
+  font-size: 1.4rem;
+  margin: 36px 0 16px;
+  color: var(--primary);
+}
+
+.service-page-content p {
+  margin-bottom: 18px;
+  color: var(--text-light);
+}
+
+.service-page-content ul {
   list-style: none;
-  margin: 0 0 20px;
+  margin: 0 0 28px;
   padding: 0;
 }
 
-.service-detail li {
-  padding: 8px 0;
-  padding-left: 24px;
+.service-page-content li {
+  padding: 10px 0 10px 28px;
   position: relative;
   color: var(--text-light);
-  font-size: 0.95rem;
-  line-height: 1.6;
+  line-height: 1.7;
+  border-bottom: 1px solid var(--border);
 }
 
-.service-detail li::before {
+.service-page-content li:last-child {
+  border-bottom: none;
+}
+
+.service-page-content li::before {
   content: '✓';
   position: absolute;
   left: 0;
   color: var(--primary);
   font-weight: 700;
+}
+
+.service-page-cta {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  text-align: center;
+  margin-top: 48px;
+}
+
+.service-page-cta h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.service-page-cta p {
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 24px;
+}
+
+.service-page-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.service-page-nav a {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
 /* ============================================
@@ -1499,6 +1551,10 @@ section {
   .blog-article-container { grid-template-columns: 1fr; }
   .article-hero-img { height: 250px; }
   .article-header h1 { font-size: 1.6rem; }
+
+  .service-page { padding: 120px 0 60px; }
+  .service-page-header h1 { font-size: 1.6rem; }
+  .service-page-cta { padding: 32px 24px; }
 
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .gallery-item:first-child { grid-column: span 2; grid-row: span 1; }

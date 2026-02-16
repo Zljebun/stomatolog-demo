@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-0.0">
+    <title>Oralna hirurgija | DentVita</title>
+    <meta name="description" content="Minimalno invazivne hirurške tehnike uz lokalnu anesteziju za brži oporavak. Vađenje umnjaka, apikotomija, augmentacija kosti, frenulektomija.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">
+                    <span class="logo-icon">🦷</span>
+                    <span class="logo-text">DentVita</span>
+                </a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html#o-nama">O nama</a></li>
+                        <li><a href="../index.html#usluge">Usluge</a></li>
+                        <li><a href="../index.html#tim">Tim</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../index.html#kontakt" class="nav-cta">Zakaži termin</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="service-page">
+        <div class="service-page-container">
+            <div class="service-page-content">
+                <span class="section-label">Usluge</span>
+                <h1>Oralna hirurgija</h1>
+                <p class="subtitle">Minimalno invazivne hirurške tehnike uz lokalnu anesteziju za brži oporavak</p>
+
+                <h2>Bezbolni hirurški zahvati</h2>
+                <p>Oralna hirurgija obuhvata širi spektar procedura - od rutinskih ekstrakcija do složenijih zahvata kao što su augmentacije kosti i apikotomije. Svi zahvati se izvode u lokalnoj anesteziji, što znači da je zahvat potpuno bezbolan. Za pacijente sa izraženim strahom nudimo opciju svjesne sedacije, pri kojoj ostajete budni ali potpuno opušteni i bez anksioznosti. Naš hirurški tim ima dugogodišnje iskustvo i koristi minimalno invazivne tehnike, što rezultira bržim zarastanjem, manjim postoperativnim komplikacijama i bržim povratkom normalnim aktivnostima. Svaki zahvat se detaljno planira uz pomoć 3D CBCT snimka.</p>
+
+                <h2>Naše usluge</h2>
+                <ul class="service-list">
+                    <li><strong>Vađenje umnjaka</strong> - Hirurško vađenje impaktiranih i poluimpaktiranih umnjaka; najčešća oralnohirurška procedura</li>
+                    <li><strong>Apikotomija</strong> - Hirurško liječenje korijenskog vrha zuba kada endodoncija nije uspješna; spašava zub</li>
+                    <li><strong>Augmentacija kosti</strong> - Nadogradnja alveolarnog grebena za buduću implantaciju; koristi se koštani graft</li>
+                    <li><strong>Frenulektomija</strong> - Korekcija prekratkog frenuluma jezične ili usnene vezice; jednostavna procedura</li>
+                    <li><strong>Biopsija</strong> - Uzorkovanje tkiva za histopatološku analizu; za dijagnozu lezija sluznice</li>
+                    <li><strong>Liječenje cista</strong> - Hirurško uklanjanje cista vilica; od manjih periodontalnih do većih folikularnih cista</li>
+                </ul>
+
+                <h2>Planiranje i postoperativna njega</h2>
+                <p>Prije svakog hiruškog zahvata radimo detaljan 3D CBCT snimak koji omogućava preciznu dijagnostiku i planiranje. Na snimku se vide sve anatomske strukture - korijen zuba, nervni kanali, sinusi, gustina kosti. To nam omogućava da predvidimo potencijalne komplikacije i prilagodimo hiruršku tehniku. Nakon zahvata dobijate pisane postoperativne instrukcije, propisanu terapiju (antibiotici, analgetici, antiedemi) i direktan broj telefona ordinacije za hitne upite. Kontrola se radi nakon 7 dana radi uklanjanja šavova. Većina pacijenata se vraća normalnim aktivnostima već sutradan, uz blagu oteklinu koja nestaje za 2-3 dana.</p>
+
+                <div class="service-page-cta">
+                    <h3>Zakažite konsultaciju</h3>
+                    <p>Detaljno planiramo svaki zahvat uz 3D CBCT snimak.</p>
+                    <a href="../index.html#kontakt" class="btn btn-white">Kontaktirajte nas</a>
+                </div>
+
+                <div class="service-page-nav">
+                    <a href="djecija-stomatologija.html" class="prev">
+                        <span class="arrow">←</span>
+                        <span class="text">Dječija stomatologija</span>
+                    </a>
+                    <a href="#" class="next disabled">
+                        <span class="text">Sljedeća usluga</span>
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 DentVita. Sva prava zadržana. | Kreirao <a href="https://webkraft.site" target="_blank">WebKraft</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll <= 0) {
+                header.classList.remove('scroll-up');
+                return;
+            }
+
+            if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+                header.classList.remove('scroll-up');
+                header.classList.add('scroll-down');
+            } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+                header.classList.remove('scroll-down');
+                header.classList.add('scroll-up');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            mainNav.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.main-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implantologija | DentVita</title>
+    <meta name="description" content="Zlatni standard za nadoknadu nedostajućih zuba sa garancijom do 10 godina. Straumann i Nobel Biocare implanti, All-on-4 koncept.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">
+                    <span class="logo-icon">🦷</span>
+                    <span class="logo-text">DentVita</span>
+                </a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html#o-nama">O nama</a></li>
+                        <li><a href="../index.html#usluge">Usluge</a></li>
+                        <li><a href="../index.html#tim">Tim</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../index.html#kontakt" class="nav-cta">Zakaži termin</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="service-page">
+        <div class="service-page-container">
+            <div class="service-page-content">
+                <span class="section-label">Usluge</span>
+                <h1>Implantologija</h1>
+                <p class="subtitle">Zlatni standard za nadoknadu nedostajućih zuba sa garancijom do 10 godina</p>
+
+                <h2>Trajno rješenje za nedostajuće zube</h2>
+                <p>Zubni implanti predstavljaju najsavremeniji i najdugovječniji način nadoknade izgubljenih zuba. To su titanijumski vijci koji se ugrađuju u kost vilice i postaju trajna osnova za estetske keramičke krunice. Za razliku od mostova, implanti ne zahtijevaju brušenje zdravih susjednih zuba, a za razliku od proteza, potpuno su fiksni i osjećaju se kao vlastiti zubi. U našoj ordinaciji koristimo isključivo premium implante svjetskih proizvođača Straumann (Švicarska) i Nobel Biocare (Švedska/SAD), koji imaju dokazanu uspješnost od 98% i decenijsko iskustvo u kliničkoj praksi.</p>
+
+                <h2>Naše usluge</h2>
+                <ul class="service-list">
+                    <li><strong>Pojedinačni implanti</strong> - Titanijumski vijak sa keramičkom krunicom za zamjenu jednog zuba; imitira prirodni korijen</li>
+                    <li><strong>Implantni mostovi</strong> - Za nadoknadu više susjednih zuba bez brušenja zdravih zuba; 2 implanta nose 3-4 krunice</li>
+                    <li><strong>All-on-4 koncept</strong> - Kompletna fiksna proteza na samo 4 implanta; rješenje za bezubost u jednoj vilici</li>
+                    <li><strong>Augmentacija kosti</strong> - Nadogradnja kosti kada nema dovoljno volumena za implant; koristi se koštani graft</li>
+                    <li><strong>Sinus lift</strong> - Podizanje dna maksilarnog sinusa za implantaciju u stražnjem dijelu gornje vilice</li>
+                    <li><strong>Navigirana implantacija</strong> - 3D planiranje i hirurška šablona za maksimalnu preciznost ugradnje implanta</li>
+                </ul>
+
+                <h2>Garancija i dugovječnost</h2>
+                <p>Uz pravilnu oralnu higijenu i redovne kontrole, zubni implanti mogu trajati cijeli život. Istraživanja pokazuju da preko 95% implanta uspješno funkcioniše i nakon 20 godina. Na sve naše implante dajemo pisanu garanciju od 10 godina, što je dokaz povjerenja u kvalitet materijala i naše stručnosti. Garancija pokriva eventualne komplikacije vezane za osteointegraciju (prihvatanje implanta u kosti). Pored garancije, naš tim će vas pratiti kroz cijeli proces - od inicijalnog 3D skeniranja i planiranja, preko hirurške faze, pa sve do finalne protetike. Dobijate i detaljan protokol za održavanje implanta i oralni higijenski set.</p>
+
+                <div class="service-page-cta">
+                    <h3>Zakažite konsultaciju za implante</h3>
+                    <p>Implanti mogu trajati cijeli život. Saznajte da li ste kandidat.</p>
+                    <a href="../index.html#kontakt" class="btn btn-white">Kontaktirajte nas</a>
+                </div>
+
+                <div class="service-page-nav">
+                    <a href="estetska-stomatologija.html" class="prev">
+                        <span class="arrow">←</span>
+                        <span class="text">Estetska stomatologija</span>
+                    </a>
+                    <a href="ortodoncija.html" class="next">
+                        <span class="text">Ortodoncija</span>
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 DentVita. Sva prava zadržana. | Kreirao <a href="https://webkraft.site" target="_blank">WebKraft</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll <= 0) {
+                header.classList.remove('scroll-up');
+                return;
+            }
+
+            if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+                header.classList.remove('scroll-up');
+                header.classList.add('scroll-down');
+            } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+                header.classList.remove('scroll-down');
+                header.classList.add('scroll-up');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            mainNav.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.main-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

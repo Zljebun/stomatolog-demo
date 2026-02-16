@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dječija stomatologija | DentVita</title>
+    <meta name="description" content="Nježan pristup za najmlađe pacijente - gradimo zdrav odnos prema zubaru od malih nogu. Preventivni pregledi, zalivanje fisura, fluoridacija.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">
+                    <span class="logo-icon">🦷</span>
+                    <span class="logo-text">DentVita</span>
+                </a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html#o-nama">O nama</a></li>
+                        <li><a href="../index.html#usluge">Usluge</a></li>
+                        <li><a href="../index.html#tim">Tim</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../index.html#kontakt" class="nav-cta">Zakaži termin</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="service-page">
+        <div class="service-page-container">
+            <div class="service-page-content">
+                <span class="section-label">Usluge</span>
+                <h1>Dječija stomatologija</h1>
+                <p class="subtitle">Nježan pristup za najmlađe pacijente - gradimo zdrav odnos prema zubaru od malih nogu</p>
+
+                <h2>Prve posjete oblikuju odnos prema zubaru</h2>
+                <p>Dječija stomatologija zahtijeva poseban pristup, strpljenje i razumijevanje. Ono što dijete doživi tokom prvih posjeta zubaru oblikuje njegov odnos prema oralnom zdravlju za cijeli život. Naš tim je obučen za rad sa djecom svih uzrasta - od beba sa prvim zubićima, preko predškolaca, do tinejdžera. Koristimo tehnike "tell-show-do" (kažemo-pokažemo-uradimo) kako bismo smanjili strah i izgradili povjerenje. Tretirajmo svakog malog pacijenta sa poštovanjem, objašnjavamo postupke na razumljiv način i nikada ne žurimo. Cilj nam je da dijete bude opušteno i da posjeta zubaru bude pozitivno iskustvo.</p>
+
+                <h2>Naše usluge</h2>
+                <ul class="service-list">
+                    <li><strong>Preventivni pregledi</strong> - Redovne kontrole od prve godine života; rani pregledi grade pozitivan odnos prema zubaru</li>
+                    <li><strong>Zalivanje fisura</strong> - Zaštita kutnjaka tankim slojem smole koji sprečava karijes; brza bezbolna procedura</li>
+                    <li><strong>Fluoridacija</strong> - Profesionalna aplikacija fluorida za jačanje gleđi; različiti ukusi za djecu</li>
+                    <li><strong>Liječenje mliječnih zuba</strong> - Plombe i endodoncija na mliječnim zubima; važno je sačuvati ih do prirodne izmjene</li>
+                    <li><strong>Interceptivna ortodoncija</strong> - Rano prepoznavanje i korekcija problema sa zagrizom; mobilni aparati za djecu</li>
+                    <li><strong>Edukacija o higijeni</strong> - Učimo djecu pravilnom pranju zuba na zabavan način; roditelji dobijaju savjete</li>
+                </ul>
+
+                <h2>Prijateljsko okruženje za djecu</h2>
+                <p>Naša ordinacija je dizajnirana tako da bude prijatna i opuštajuća za najmlađe pacijente. U čekaonici imamo dječiji kutak sa knjigama, igračkama i crtaćima na TV-u. Zidovi su oslikani vedrim motivima, a u ordinaciji djeca mogu birati boju katančića koji koristi stomatolog i slušati muziku tokom tretmana. Nakon uspješno završene posjete, svako dijete dobija malu nagradu - nalepnicu, balončić ili flaster u boji. Roditelji su dobrodošli da budu prisutni tokom pregleda, posebno kod mlađe djece. Naš tim će vas uputiti u pravilnu oralnu higijenu kod kuće, odabir četkice i paste, te prehranu koja podržava zdrave zube.</p>
+
+                <div class="service-page-cta">
+                    <h3>Zakažite termin za vaše dijete</h3>
+                    <p>Naš tim koristi pristup prilagođen najmlađima.</p>
+                    <a href="../index.html#kontakt" class="btn btn-white">Kontaktirajte nas</a>
+                </div>
+
+                <div class="service-page-nav">
+                    <a href="ortodoncija.html" class="prev">
+                        <span class="arrow">←</span>
+                        <span class="text">Ortodoncija</span>
+                    </a>
+                    <a href="oralna-hirurgija.html" class="next">
+                        <span class="text">Oralna hirurgija</span>
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 DentVita. Sva prava zadržana. | Kreirao <a href="https://webkraft.site" target="_blank">WebKraft</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll <= 0) {
+                header.classList.remove('scroll-up');
+                return;
+            }
+
+            if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+                header.classList.remove('scroll-up');
+                header.classList.add('scroll-down');
+            } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+                header.classList.remove('scroll-down');
+                header.classList.add('scroll-up');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            mainNav.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.main-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
