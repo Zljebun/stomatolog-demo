@@ -495,6 +495,60 @@ section {
 .service-link:hover { gap: 10px; }
 
 /* ============================================
+   SERVICE DETAILS
+   ============================================ */
+
+.service-details {
+  background: var(--bg-white);
+  padding: 0 0 80px;
+}
+
+.service-detail {
+  background: var(--bg);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  margin-bottom: 24px;
+  border: 1px solid var(--border);
+  scroll-margin-top: 100px;
+}
+
+.service-detail h3 {
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.service-detail > p {
+  color: var(--text-light);
+  font-size: 1rem;
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.service-detail ul {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.service-detail li {
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.service-detail li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* ============================================
    ABOUT
    ============================================ */
 
